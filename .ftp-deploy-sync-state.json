@@ -1,0 +1,173 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1792757606181,
+    "data": [
+        {
+            "type": "file",
+            "name": "404.php",
+            "size": 165,
+            "hash": "564f0b0fd153d4e4c1cd1c27de6a01c44a3c5a47406910082deb6301dea95c40"
+        },
+        {
+            "type": "file",
+            "name": "README.txt",
+            "size": 1223,
+            "hash": "c84d0386254d45440a3ff059143e3ce6c1cef54ddbbae0d20e394203226c3fb4"
+        },
+        {
+            "type": "folder",
+            "name": "assets"
+        },
+        {
+            "type": "folder",
+            "name": "content"
+        },
+        {
+            "type": "file",
+            "name": "footer.php",
+            "size": 184,
+            "hash": "8b0b076173c630889b293ff3c6f68d70f87bdbb8843565a2b43c737cf0d22018"
+        },
+        {
+            "type": "file",
+            "name": "functions.php",
+            "size": 6702,
+            "hash": "46f7b6096b0e903f7cf7e9f1e6373b602de2fbb11dbfbd6d94fb037b735b68b0"
+        },
+        {
+            "type": "file",
+            "name": "header.php",
+            "size": 437,
+            "hash": "68ab356ef2a63dbd5e8db13f4d10bf5824f198579deaf767c9dabf89a5d20c28"
+        },
+        {
+            "type": "folder",
+            "name": "inc"
+        },
+        {
+            "type": "file",
+            "name": "index.php",
+            "size": 752,
+            "hash": "5e9e58f434dbebcdd7427b005f25a618fce4e8d05f092419d09b3c2a6b6142a2"
+        },
+        {
+            "type": "file",
+            "name": "page.php",
+            "size": 489,
+            "hash": "8a9bbf8948765b6b8fd6c7be6921a77a9b28ba22e001f4a90c8f417568b17231"
+        },
+        {
+            "type": "folder",
+            "name": "parts"
+        },
+        {
+            "type": "file",
+            "name": "screenshot.png",
+            "size": 284252,
+            "hash": "c62e43c00055d4147028bf1032f6cfcf966e63da31fb9b5d9a0fac366dff1ec3"
+        },
+        {
+            "type": "file",
+            "name": "singular.php",
+            "size": 149,
+            "hash": "1fde3870c69942d9442973eb24fa6574072dee0cc9f438406e744d52d0956ab3"
+        },
+        {
+            "type": "file",
+            "name": "style.css",
+            "size": 498,
+            "hash": "3a017f3ea42097a7dfa199d3f84f3b27f71fd12c253d083ba6042dd8f6f2c872"
+        },
+        {
+            "type": "folder",
+            "name": "assets/css"
+        },
+        {
+            "type": "folder",
+            "name": "assets/img"
+        },
+        {
+            "type": "folder",
+            "name": "assets/js"
+        },
+        {
+            "type": "file",
+            "name": "content/pages.json",
+            "size": 316729,
+            "hash": "4bd20aea23ab87dade4f785f9a8309752446bd7a3714e18e7e4aaa4758a6582e"
+        },
+        {
+            "type": "file",
+            "name": "inc/enquiries.php",
+            "size": 7518,
+            "hash": "792d89ebfefd2aa7a80e97190ef697444ccc2af9318fe270337215d94661ea08"
+        },
+        {
+            "type": "file",
+            "name": "inc/opportunities.php",
+            "size": 8262,
+            "hash": "b588a34eb56e4b3185a3c41ecfb2cf9c96808db43ff6b80a3d007a255d0537d3"
+        },
+        {
+            "type": "file",
+            "name": "inc/settings.php",
+            "size": 3848,
+            "hash": "707d39ae0a4ef3a02fd524c305b37a129c0cb28795cb733a373e16107a6d8994"
+        },
+        {
+            "type": "file",
+            "name": "inc/setup.php",
+            "size": 3382,
+            "hash": "11110f92c78ebbb54285df0e4ae8d862d4ea1827ed0e1843dd11cb995668d5df"
+        },
+        {
+            "type": "file",
+            "name": "parts/404.html",
+            "size": 527,
+            "hash": "181f8b91acadfb225f32af5de457f0117094f5f3071cc69f7a80e4b20c7780cc"
+        },
+        {
+            "type": "file",
+            "name": "parts/footer.html",
+            "size": 8739,
+            "hash": "8622f1645c87734d046f733b226c6af143d41f219cdebb8e28778ac93dc1e489"
+        },
+        {
+            "type": "file",
+            "name": "parts/header.html",
+            "size": 10935,
+            "hash": "8ad0bf705e7e35a565fd68bceb0c8f4120f689031f5035fb23cb540c7301a5e5"
+        },
+        {
+            "type": "file",
+            "name": "parts/plain.php",
+            "size": 533,
+            "hash": "947feaeda7291c9d80f07ac9ca315fecccd129ede66b40697a9ff85dcefe2677"
+        },
+        {
+            "type": "file",
+            "name": "assets/css/site.css",
+            "size": 34647,
+            "hash": "c8651935f27514f520fbab33363d314cd21424e37e27d3bf7cf73d2844d2d5ac"
+        },
+        {
+            "type": "file",
+            "name": "assets/img/favicon.svg",
+            "size": 8297,
+            "hash": "3e72fd6dfa1d3dceb168d7cc7183a12c58250328d9553c0b52efd9038f180f87"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/forms.js",
+            "size": 20202,
+            "hash": "a22d943cb6957ed8477f6d84eb6a63b4c9ad09313f88773638ecbe69f289d7bb"
+        },
+        {
+            "type": "file",
+            "name": "assets/js/site.js",
+            "size": 20806,
+            "hash": "2b6497de365a89bc04cabf0e86a53bb75f091319aba83377863ae589a8d248ca"
+        }
+    ]
+}
