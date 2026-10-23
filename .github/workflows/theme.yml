@@ -19,11 +19,20 @@ jobs:
         with:
           node-version: 20
       - run: node src/build.js wp
+      - name: Clean up the FTP server name
+        if: env.HAS_FTP == 'true'
+        id: ftp
+        env:
+          RAW: ${{ secrets.FTP_SERVER }}
+        run: |
+          host=$(printf '%s' "$RAW" | tr -d '[:space:]' | sed -E 's#^s?ftps?://##; s#[/:].*$##')
+          echo "::add-mask::$host"
+          echo "host=$host" >> "$GITHUB_OUTPUT"
       - name: Upload to Hostinger over FTP
         if: env.HAS_FTP == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ steps.ftp.outputs.host }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: wordpress/digitaleem/
