@@ -1,0 +1,27 @@
+# Builds the WordPress theme on every push to main and publishes it to the "theme" branch.
+# Hostinger (Websites > Advanced > Git) deploys the "theme" branch into wp-content/themes/digitaleem.
+name: Build WordPress theme
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node src/build.js wp
+      - name: Publish to the theme branch
+        run: |
+          cd wordpress/digitaleem
+          git init -q -b theme
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Theme built from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" theme
