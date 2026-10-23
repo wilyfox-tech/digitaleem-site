@@ -1,6 +1,7 @@
-# Builds the WordPress theme on every push to main and publishes it to the "theme" branch.
-# Hostinger (Websites > Advanced > Git) deploys the "theme" branch into wp-content/themes/digitaleem.
-name: Build WordPress theme
+# Builds the WordPress theme on every push to main, publishes it to the "theme" branch,
+# and uploads it to Hostinger over FTP when the FTP secrets are set
+# (repo Settings > Secrets and variables > Actions: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, optional FTP_DIR).
+name: Build and deploy WordPress theme
 on:
   push:
     branches: [main]
@@ -10,12 +11,23 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HAS_FTP: ${{ secrets.FTP_SERVER != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: node src/build.js wp
+      - name: Upload to Hostinger over FTP
+        if: env.HAS_FTP == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: wordpress/digitaleem/
+          server-dir: ${{ secrets.FTP_DIR || '/public_html/wp-content/themes/digitaleem/' }}
       - name: Publish to the theme branch
         run: |
           cd wordpress/digitaleem
