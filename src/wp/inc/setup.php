@@ -74,6 +74,9 @@ function dgt_import_pages( $overwrite = false ) {
 			continue;
 		}
 		update_post_meta( $id, '_dgt_designed', 1 );
+		// A page left over from an earlier site may carry a blank template or a page-builder layout that drops the header and footer.
+		delete_post_meta( $id, '_wp_page_template' );
+		delete_post_meta( $id, '_elementor_edit_mode' );
 		update_post_meta( $id, '_dgt_path', $page['path'] );
 		if ( $page['noindex'] ) {
 			update_post_meta( $id, '_dgt_noindex', 1 );

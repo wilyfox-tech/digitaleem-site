@@ -117,6 +117,14 @@ add_filter( 'language_attributes', function ( $output ) {
 	return preg_replace( '/lang="en-US"/', 'lang="en-IN"', $output );
 } );
 
+/* Pages built by the theme always use its own page template, whatever template or page builder an earlier site set. */
+add_filter( 'template_include', function ( $template ) {
+	if ( dgt_is_designed() ) {
+		return DGT_DIR . '/page.php';
+	}
+	return $template;
+}, 999 );
+
 /* ---------- Header and footer ---------- */
 function dgt_part( $name ) {
 	$file = DGT_DIR . '/parts/' . $name . '.html';
